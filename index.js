@@ -1,27 +1,23 @@
 let cart = [];
 
-
 function updateCart() {
   const cartItems = document.getElementById("cart-items");
   const cartTotal = document.getElementById("cart-total");
   const cartTitle = document.getElementById("cart-title");
   const emptyCartBlock = document.getElementById("empty-cart");
   const nonEmptyCart = document.getElementById("non-empty-cart");
-  cartItems.innerHTML = ""; // Clear previous items
+  cartItems.innerHTML = "";
   let total = 0;
 
-  
   cartTitle.textContent = `Your Cart (${cart.reduce(
     (sum, item) => sum + item.quantity,
     0
   )})`;
 
-  
   emptyCartBlock.style.display = cart.length === 0 ? "flex" : "none";
   nonEmptyCart.style.display = cart.length === 0 ? "none" : "block";
   cartTotal.textContent = cart.length === 0 ? "$0.00" : "";
 
- 
   cart.forEach((item, index) => {
     const itemTotal = item.quantity * item.price;
     total += itemTotal;
@@ -56,7 +52,6 @@ function updateCart() {
   cartTotal.textContent = `$${total.toFixed(2)}`;
 }
 
-
 function setupCartEventListeners() {
   const cartItems = document.getElementById("cart-items");
   cartItems.addEventListener("click", (e) => {
@@ -70,7 +65,6 @@ function setupCartEventListeners() {
     }
   });
 }
-
 
 function updateProductCard(productName) {
   const cards = document.querySelectorAll("#product-container > div");
@@ -98,11 +92,10 @@ function updateProductCard(productName) {
   });
 }
 
-
 function showOrderConfirmedModal() {
   const modalCartItems = document.getElementById("modal-cart-items");
   const modalCartTotal = document.getElementById("modal-cart-total");
-  modalCartItems.innerHTML = ""; 
+  modalCartItems.innerHTML = "";
   let total = 0;
 
   cart.forEach((item) => {
@@ -136,9 +129,8 @@ function showOrderConfirmedModal() {
   const cartOverlay = document.getElementById("overlay");
   cartModal.classList.remove("hidden");
   cartOverlay.classList.remove("hidden");
-  setTimeout(() => cartModal.classList.add("show"), 10); 
+  setTimeout(() => cartModal.classList.add("show"), 10);
 }
-
 
 function loadProducts() {
   fetch("data.json")
@@ -257,7 +249,6 @@ function loadProducts() {
         container.appendChild(card);
       });
 
-      
       const confirmButton = document.getElementById("confirm-button");
       const startNewButton = document.getElementById("start-new");
       const cartOverlay = document.getElementById("overlay");

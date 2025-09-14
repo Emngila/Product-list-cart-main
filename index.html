@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="h-full min-w-[375px]" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
+    <script defer src="./index.js"></script>
+    <title>PRODUCT-LIST-CART-MAIN1</title>
+  </head>
+  <body class="h-full bg-Rose-50">
+    <main
+      class="margins grid grid-cols-1 xl:grid-cols-[800px_auto] xl:grid-rows-[0_80px] xl:gap-y-12 md:gap-x-6 -z-50"
+    >
+      <header class="col-span-2">
+        <h1 class="text-1 text-Rose-900 mb-6">Desserts</h1>
+      </header>
+
+      <div
+        class="gap-y-0 xl:gap-y-0 grid grid-cols-1 md:grid-cols-3 md:gap-x-6 xl:mt-[-46px]"
+        id="product-container"
+      ></div>
+
+      <!-- Cart -->
+      <section
+        class="space-y-6 p-6 bg-White h-min rounded-xl col-start-1 xl:col-start-2 xl:w-[384px] row-start-0 xl:row-start-1 md:mt-12"
+      >
+        <h2 id="cart-title" class="text-2 text-Red">Your Cart (0)</h2>
+        <div id="empty-cart" class="flex flex-col justify-center items-center">
+          <img
+            id="image-border"
+            class="w-32 h-32"
+            src="./src/assets/images/illustration-empty-cart.svg"
+            alt="image of empty cart"
+          />
+          <p class="text-4-bold text-Rose-500">
+            Your added items will appear here
+          </p>
+        </div>
+
+        <ul id="cart-items" class="space-y-2"></ul>
+
+        <!-- Non Empty cart -->
+        <div id="non-empty-cart" class="hidden space-y-6">
+          <div class="flex justify-between">
+            <p class="text-4 text-Rose-900">Order Total</p>
+            <p id="cart-total" class="text-2 text-Rose-900">$0.00</p>
+          </div>
+          <p
+            class="flex items-center justify-center gap-x-2 text-4 text-Rose-900 p-4 bg-Rose-50 rounded-[8px]"
+          >
+            <img
+              class="w-5 h-5"
+              src="./src/assets/images/icon-carbon-neutral.svg"
+              alt="Carbon neutral icon"
+            />
+            This is carbon neutral delivery
+          </p>
+
+          <button
+            id="confirm-button"
+            class="bg-[#C73B0F] hover:bg-[#952C0B] transition-colors duration-300 ease-in-out w-[279px] md:w-full text-3 cursor-pointer text-White py-4 px-6 rounded-full"
+          >
+            Confirm Order
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!--  Cart Modal -->
+ 
+    <div
+      id="overlay"
+      class="fixed inset-0 hidden bg-black/50 z-40 flex items-center justify-center"
+    >
+      <!-- Modal -->
+      <div
+        id="cart-modal"
+        class="bg-white p-10 rounded-xl w-[375px] md:w-[688px] xl:w-[592px] space-y-8 shadow-lg"
+      >
+        <div class="space-y-6">
+          <img
+            class="w-12 h-12"
+            src="./src/assets/images/icon-order-confirmed.svg"
+            alt=""
+          />
+          <div class="space-y-2">
+            <h2 class="text-1 text-Rose-900">Order Confirmed</h2>
+            <p class="text-4">We hope you enjoy your food!</p>
+          </div>
+        </div>
+
+        <!-- Cart Items -->
+        <ul id="modal-cart-items" class="space-y-2"></ul>
+
+        <!-- Cart Footer -->
+        <div class="px-0 xl:px-0 flex justify-between items-center">
+          <span class="font-semibold">Order Total</span>
+          <span id="modal-cart-total" class="font-bold text-Red">$0.00</span>
+        </div>
+
+        <button
+          id="start-new"
+          class="text-3 text-white px-6 py-4 w-full flex justify-center items-center rounded-full bg-[#C73B0F] hover:bg-[#952C0B] transition-colors duration-300 ease-in-out"
+        >
+          Start New Order
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

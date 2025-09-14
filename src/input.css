@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("./assets/fonts/RedHatText-VariableFont_wght.ttf") format("truetype");
+  font-style: medium;
+  font-weight: 100 900;
+}
+@theme {
+  --color-Red: #c73b0f;
+  --color-Rose-900: #260f08;
+  --color-Rose-300: #caafa7;
+  --color-Rose-500: #87635a;
+  --color-Rose-100: #f5eeec;
+  --color-Rose-50: #fcf8f6;
+  --color-Rose-400: #ad8a85;
+  --color-Green: #1ea575;
+  --color-Black: #000000;
+  --color-White: #ffffff;
+  --color-dark-red: #ca8b78;
+
+  --font-Red-Hat-Text: "Red Hat Text";
+  --breakpoint-*: initial;
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1280px;
+}
+@media (min-width: 16rem) {
+  .margins {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  @media (min-width: 48rem) {
+    .margins {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (min-width: 80rem) {
+      .margins {
+        margin-left: 7rem;
+        margin-right: 7rem;
+
+        margin-bottom: 5.5rem;
+      }
+    }
+  }
+}
+
+@layer utilities {
+  .text-1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-family: var(--font-Red-Hat-Text);
+    font-weight: 700;
+  }
+
+  .text-2 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    letter-spacing: 0;
+    font-family: var(--font-Red-Hat-Text);
+    font-weight: 700;
+  }
+
+  .text-3 {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: var(--font-Red-Hat-Text);
+    font-weight: 600;
+  }
+
+  .text-4 {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: var(--font-Red-Hat-Text);
+    font-weight: 400;
+  }
+
+  .text-4-bold {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: var(--font-Red-Hat-Text);
+    font-weight: 600;
+  }
+  .text-button {
+    font-size: 24px;
+    line-height: 0;
+    letter-spacing: 0;
+    font-family: var(--font-Red-Hat-Text);
+    font-weight: 400;
+  }
+}
+

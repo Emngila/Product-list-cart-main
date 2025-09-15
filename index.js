@@ -104,9 +104,9 @@ function showOrderConfirmedModal() {
 
     const li = document.createElement("li");
     li.className =
-      "flex justify-between items-center border-b border-Rose-100 py-2";
+      "flex justify-between px-4  items-center border-b bg-Rose-50 border-Rose-100 py-2";
     li.innerHTML = `
-      <div class="flex items-center space-x-3">
+      <div class="flex justify-center items-center space-x-3 ">
         <img src="${item.image.thumbnail}" alt="${
       item.name
     }" class="w-12 h-12 rounded">

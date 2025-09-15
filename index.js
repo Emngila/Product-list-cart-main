@@ -120,6 +120,7 @@ function showOrderConfirmedModal() {
         </div>
       </div>
       <span class="text-4-bold text-Rose-900">$${itemTotal.toFixed(2)}</span>
+      
     `;
     modalCartItems.appendChild(li);
   });

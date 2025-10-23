@@ -151,7 +151,7 @@ function loadProducts() {
         const card = document.createElement("div");
         card.className = "bg-Rose-50 text-center  relative mb-8 rounded-[8px]";
         card.innerHTML = `
-          <div class="bg-Rose-50 text-center w-[327px] md:w-auto   relative mb-8 rounded-[8px]">
+          <div class="bg-Rose-50 text-center w-[100%] max-w-[400px]   relative mb-8 rounded-[8px]">
             <picture>
               <source media="(min-width: 1024px)" srcset="${
                 product.image.desktop
@@ -159,14 +159,14 @@ function loadProducts() {
               <source media="(min-width: 768px)" srcset="${
                 product.image.tablet
               }" />
-              <source media="(min-width: 375px)" srcset="${
+              <source media="(min-width: 90px)" srcset="${
                 product.image.mobile
               }" />
-              <img class="image-border w-[327px] rounded-[8px]" src="${
+              <img class="image-border w-full rounded-[8px]" src="${
                 product.image.thumbnail
               }" alt="${product.name}" />
             </picture>
-            <div class="quantity-container hidden  absolute bottom-[-20px] left-1/2 translate-x-[-50%] w-[160px] h-[44px] rounded-full bg-Red flex items-center justify-around gap-x-4">
+            <div class="quantity-container hidden  absolute bottom-[-20px] left-1/2 translate-x-[-50%] w-[70%] h-[21%] rounded-full bg-Red flex items-center justify-around gap-x-4">
               <button class="group decrease cursor-pointer" aria-label="Decrease quantity of ${
                 product.name
               }">
@@ -185,7 +185,7 @@ function loadProducts() {
                 </svg>
               </button>
             </div>
-            <button class="add-to-cart absolute cursor-pointer bottom-[-20px] left-1/2 translate-x-[-50%]  flex justify-center gap-x-2 items-center p-3 w-[160px] h-[44px] rounded-full bg-White text-4-bold border border-Rose-400 text-Rose-900 hover:text-Red transition-all duration-300 ease-in-out" aria-label="Add ${
+            <button class="add-to-cart absolute cursor-pointer bottom-[-20px] left-1/2 translate-x-[-50%]  flex justify-center gap-x-2 items-center p-3 w-[70%] h-[21%] rounded-full bg-White text-4-bold border border-Rose-400 text-Rose-900 hover:text-Red transition-all duration-300 ease-in-out" aria-label="Add ${
               product.name
             } to cart">
               <img class="w-5 h-5" src="./src/assets/images/icon-add-to-cart.svg" alt="Add to cart icon"/>

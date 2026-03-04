@@ -185,12 +185,29 @@ function loadProducts() {
                 </svg>
               </button>
             </div>
-            <button class="add-to-cart absolute cursor-pointer bottom-[-20px] left-1/2 translate-x-[-50%]  flex justify-center gap-x-2 items-center p-[0.75rem] w-[60%] md:w-[70%] h-[16%] rounded-full bg-White text-4-bold border border-Rose-400 text-Rose-900 hover:text-Red transition-all duration-300 ease-in-out" aria-label="Add ${
-              product.name
-            } to cart">
-              <img width ="20" height ="20" class="w-5 h-5" src="./src/assets/images/icon-add-to-cart.svg" alt="Add to cart icon"/>
-              Add to Cart
-            </button>
+           <button
+  class="add-to-cart absolute bottom-[-20px] left-1/2 -translate-x-1/2
+         flex items-center justify-center gap-2
+         w-[60%] md:w-[70%]
+         py-3
+         rounded-full
+         bg-White text-4-bold
+         border border-Rose-400
+         text-Rose-900
+         hover:text-Red
+         transition-all duration-300 ease-in-out
+         cursor-pointer"
+  aria-label="Add ${product.name} to cart"
+>
+  <img
+    src="./src/assets/images/icon-add-to-cart.svg"
+    alt="Add to cart icon"
+    class="w-5 h-5"
+    width="20"
+    height="20"
+  />
+  Add to Cart
+</button>
           </div>
           <div class="flex flex-col space-y-1 text-start">
             <p class="text-4 text-Rose-500">${product.category}</p>

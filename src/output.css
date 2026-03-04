@@ -265,6 +265,9 @@
   .table {
     display: table;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -288,6 +291,9 @@
   }
   .h-min {
     height: min-content;
+  }
+  .min-h-\[800px\] {
+    min-height: 800px;
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -504,6 +510,9 @@
   }
   .fill-\[\#AD8A85\] {
     fill: #AD8A85;
+  }
+  .object-cover {
+    object-fit: cover;
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);

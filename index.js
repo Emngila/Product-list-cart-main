@@ -188,7 +188,7 @@ function loadProducts() {
             <button class="add-to-cart absolute cursor-pointer bottom-[-20px] left-1/2 translate-x-[-50%]  flex justify-center gap-x-2 items-center p-[0.75rem] w-[60%] md:w-[70%] h-[16%] rounded-full bg-White text-4-bold border border-Rose-400 text-Rose-900 hover:text-Red transition-all duration-300 ease-in-out" aria-label="Add ${
               product.name
             } to cart">
-              <img class="w-5 h-5" src="./src/assets/images/icon-add-to-cart.svg" alt="Add to cart icon"/>
+              <img width ="20" height ="20" class="w-5 h-5" src="./src/assets/images/icon-add-to-cart.svg" alt="Add to cart icon"/>
               Add to Cart
             </button>
           </div>

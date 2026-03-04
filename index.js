@@ -164,7 +164,7 @@ function loadProducts() {
               }" />
               <img class="image-border w-full rounded-[8px]" src="${
                 product.image.thumbnail
-              }" alt="${product.name}" width ="250.67" height = "262" />
+              }" alt="${product.name}" width ="250.67" height ="262" loading="lazy"/>
             </picture>
             <div class="quantity-container hidden  absolute bottom-[-20px] left-1/2 translate-x-[-50%] w-[60%] md:w-[70%] h-[16%]  rounded-full bg-Red flex items-center justify-around gap-x-4">
               <button class="group decrease cursor-pointer" aria-label="Decrease quantity of ${

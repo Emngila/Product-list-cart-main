@@ -20,10 +20,10 @@
 
   --font-Red-Hat-Text: "Red Hat Text";
   --breakpoint-*: initial;
-  --breakpoint-sm: 375px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 976px;
-  --breakpoint-xl: 1280px;
+  --breakpoint-sm: 23.4375rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 61rem;
+  --breakpoint-xl: 80rem;
 }
 @media (min-width: 16rem) {
   .margins {
@@ -98,4 +98,3 @@
     font-weight: 400;
   }
 }
-

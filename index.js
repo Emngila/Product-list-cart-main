@@ -164,7 +164,7 @@ function loadProducts() {
               }" />
               <img class="image-border w-full rounded-[8px]" src="${
                 product.image.thumbnail
-              }" alt="${product.name}" />
+              }" alt="${product.name}" width ="250.67" height = "262" />
             </picture>
             <div class="quantity-container hidden  absolute bottom-[-20px] left-1/2 translate-x-[-50%] w-[60%] md:w-[70%] h-[16%]  rounded-full bg-Red flex items-center justify-around gap-x-4">
               <button class="group decrease cursor-pointer" aria-label="Decrease quantity of ${
@@ -185,7 +185,7 @@ function loadProducts() {
                 </svg>
               </button>
             </div>
-            <button class="add-to-cart absolute cursor-pointer bottom-[-20px] left-1/2 translate-x-[-50%]  flex justify-center gap-x-2 items-center p-3 w-[60%] md:w-[70%] h-[16%] rounded-full bg-White text-4-bold border border-Rose-400 text-Rose-900 hover:text-Red transition-all duration-300 ease-in-out" aria-label="Add ${
+            <button class="add-to-cart absolute cursor-pointer bottom-[-20px] left-1/2 translate-x-[-50%]  flex justify-center gap-x-2 items-center p-[0.75rem] w-[60%] md:w-[70%] h-[16%] rounded-full bg-White text-4-bold border border-Rose-400 text-Rose-900 hover:text-Red transition-all duration-300 ease-in-out" aria-label="Add ${
               product.name
             } to cart">
               <img class="w-5 h-5" src="./src/assets/images/icon-add-to-cart.svg" alt="Add to cart icon"/>

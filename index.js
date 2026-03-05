@@ -150,9 +150,9 @@ function loadProducts() {
 
         const card = document.createElement("div");
         card.className =
-          "bg-Rose-50 text-center w-[20.4375rem] h-[19.9375rem]  xl:w-[15.666875rem] xl:h-[21.6875rem] md:w-[13.333125rem] md:h-[19.9375rem]  relative mb-8 rounded-[8px]";
+          "bg-Rose-50 text-center w-[20.4375rem] h-[21.6875rem]  xl:w-[15.666875rem] xl:h-[21.6875rem] md:w-[13.333125rem] md:h-[19.9375rem]  relative mb-8 rounded-[8px]";
         card.innerHTML = `
-          <div class="bg-Rose-50 text-center     relative mb-8 rounded-[8px]">
+          <div class="bg-Rose-50 text-center w-[15.666875rem] h-[15rem]     relative mb-8 rounded-[8px]">
             <picture>
               <source media="(min-width: 1024px)" srcset="${
                 product.image.desktop
@@ -163,9 +163,15 @@ function loadProducts() {
               <source media="(min-width: 90px)" srcset="${
                 product.image.mobile
               }" />
-              <img class="image-border w-full rounded-[8px]" src="${
-                product.image.thumbnail
-              }" alt="${product.name}" width ="250.67" height ="262" loading="lazy"/>
+  <img
+  src="${product.image.thumbnail}"
+  alt="${product.name}"
+  width="1"
+  height="1"
+  class="w-full h-full object-cover rounded-[8px]"
+  loading="lazy"
+  decoding="async"
+/>
             </picture>
             <div class="quantity-container hidden  absolute bottom-[-20px] left-1/2 translate-x-[-50%] w-[60%] md:w-[70%] h-[16%]  rounded-full bg-Red flex items-center justify-around gap-x-4">
               <button class="group decrease cursor-pointer" aria-label="Decrease quantity of ${

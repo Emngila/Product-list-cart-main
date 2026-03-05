@@ -163,17 +163,17 @@ function loadProducts() {
               <source media="(min-width: 90px)" srcset="${
                 product.image.mobile
               }" />
-  <img
+              <img
+  class="image-border w-full h-full object-cover rounded-[8px]"
   src="${product.image.thumbnail}"
   alt="${product.name}"
-  width="1"
-  height="1"
-  class="w-full h-full object-cover rounded-[8px]"
+  width="250"
+  height="250"
   loading="lazy"
   decoding="async"
 />
             </picture>
-            <div class="quantity-container hidden  absolute bottom-[-20px] left-1/2 translate-x-[-50%] w-[60%] md:w-[70%] h-[16%]  rounded-full bg-Red flex items-center justify-around gap-x-4">
+            <div class="quantity-container hidden w-[10rem] h-[2.75rem]  absolute bottom-[-20px] left-1/2 translate-x-[-50%]  rounded-full bg-Red flex items-center justify-around gap-x-4">
               <button class="group decrease cursor-pointer" aria-label="Decrease quantity of ${
                 product.name
               }">
@@ -182,7 +182,7 @@ function loadProducts() {
                   <path d="M5 9.375H15V10.625H5V9.375Z" class="fill-White group-hover:fill-Red transition-colors duration-300"/>
                 </svg>
               </button>
-              <span class="quantity text-4-bold w-6 text-White">0</span>
+              <span class="quantity  text-4-bold w-6 text-White">0</span>
               <button class="group increase cursor-pointer" aria-label="Increase quantity of ${
                 product.name
               }">

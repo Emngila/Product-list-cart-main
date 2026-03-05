@@ -11,7 +11,7 @@ function updateCart() {
 
   cartTitle.textContent = `Your Cart (${cart.reduce(
     (sum, item) => sum + item.quantity,
-    0
+    0,
   )})`;
 
   emptyCartBlock.style.display = cart.length === 0 ? "flex" : "none";
@@ -38,8 +38,8 @@ function updateCart() {
         </div>
       </div>
       <button class="group remove-item text-red-500 text-xs underline cursor-pointer ml-3" data-index="${index}" aria-label="Remove ${
-      item.name
-    } from cart">
+        item.name
+      } from cart">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 1.25C5.125 1.25 1.25 5.125 1.25 10C1.25 14.875 5.125 18.75 10 18.75C14.875 18.75 18.75 14.875 18.75 10C18.75 5.125 14.875 1.25 10 1.25ZM10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5Z" class="fill-[#AD8A85] group-hover:fill-Rose-900 transition-colors duration-300"/>
           <path d="M13.375 14.375L10 11L6.625 14.375L5.625 13.375L9 10L5.625 6.625L6.625 5.625L10 9L13.375 5.625L14.375 6.625L11 10L14.375 13.375L13.375 14.375Z" class="fill-[#AD8A85] group-hover:fill-Rose-900 transition-colors duration-300"/>
@@ -108,8 +108,8 @@ function showOrderConfirmedModal() {
     li.innerHTML = `
       <div class="flex justify-center items-center space-x-3 ">
         <img src="${item.image.thumbnail}" alt="${
-      item.name
-    }" class="w-12 h-12 rounded">
+          item.name
+        }" class="w-12 h-12 rounded">
         <div>
           <h4 class="text-4-bold text-Rose-900">${item.name}</h4>
           <p class="text-4 text-Rose-500">
@@ -149,9 +149,10 @@ function loadProducts() {
         }
 
         const card = document.createElement("div");
-        card.className = "bg-Rose-50 text-center  relative mb-8 rounded-[8px]";
+        card.className =
+          "bg-Rose-50 text-center w-[20.4375rem] h-[21.6875rem]  xl:w-[15.666875rem] xl:h-[21.6875rem] md:w-[13.333125rem] md:h-[13.6875rem]  relative mb-8 rounded-[8px]";
         card.innerHTML = `
-          <div class="bg-Rose-50 text-center w-[100%] max-w-[400px]   relative mb-8 rounded-[8px]">
+          <div class="bg-Rose-50 text-center     relative mb-8 rounded-[8px]">
             <picture>
               <source media="(min-width: 1024px)" srcset="${
                 product.image.desktop

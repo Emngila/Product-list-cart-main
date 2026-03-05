@@ -185,10 +185,10 @@ function loadProducts() {
                 </svg>
               </button>
             </div>
-           <button
-  class="add-to-cart absolute bottom-[-20px] left-1/2 -translate-x-1/2
+           <button 
+  class="add-to-cart absolute w-[10rem] h-[2.75rem]  bottom-[-20px] left-1/2 -translate-x-1/2
          flex items-center justify-center gap-2
-         w-[60%] md:w-[70%]
+         
          py-3
          rounded-full
          bg-White text-4-bold

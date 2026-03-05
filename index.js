@@ -150,7 +150,7 @@ function loadProducts() {
 
         const card = document.createElement("div");
         card.className =
-          "bg-Rose-50 text-center w-[20.4375rem] h-[21.6875rem]  xl:w-[15.666875rem] xl:h-[21.6875rem] md:w-[13.333125rem] md:h-[13.6875rem]  relative mb-8 rounded-[8px]";
+          "bg-Rose-50 text-center w-[20.4375rem] h-[19.9375rem]  xl:w-[15.666875rem] xl:h-[21.6875rem] md:w-[13.333125rem] md:h-[19.9375rem]  relative mb-8 rounded-[8px]";
         card.innerHTML = `
           <div class="bg-Rose-50 text-center     relative mb-8 rounded-[8px]">
             <picture>

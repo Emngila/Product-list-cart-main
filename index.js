@@ -152,7 +152,7 @@ function loadProducts() {
         card.className =
           "bg-Rose-50 text-center w-[20.4375rem] h-[21.6875rem]  xl:w-[15.666875rem] xl:h-[21.6875rem] md:w-[13.333125rem] md:h-[19.9375rem]  relative mb-8 rounded-[8px]";
         card.innerHTML = `
-          <div class="bg-Rose-50 text-center w-[15.666875rem] h-[15rem]     relative mb-8 rounded-[8px]">
+          <div class="bg-Rose-50 text-center w-[20.4375rem] h-[14.625rem]  xl:w-[15.666875rem] xl:h-[15rem] md:w-[13.333125rem] md:h-[13.25rem]     relative mb-8 rounded-[8px]">
             <picture>
               <source media="(min-width: 1024px)" srcset="${
                 product.image.desktop
